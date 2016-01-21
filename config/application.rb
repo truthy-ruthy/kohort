@@ -22,5 +22,9 @@ module Kohort
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+    config.action_view.default_form_builder = FoundationFormBuilder::Rails
+
   end
+
+
 end
