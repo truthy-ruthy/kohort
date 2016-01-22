@@ -2,34 +2,23 @@
 <!-- <p>main page</p> -->
 <div class="mobile-screen">
   <div class="header">
-    <h1>Log in</h1>
+    <h1>Login</h1>
   </div>
 
   <div class="logo"></div>
 
-  <form action="/register" method="post" id="registration-form">
-    <input type="email" name="email" placeholder="Email">
-    <input type="first_name" name="first_name" placeholder="first_name">
-    <input type="age" name="age" placeholder="Age Range">
-    <input type="password" name="pass" placeholder="Password">
-    <input type="password" name="repass" placeholder="Repeat password">
-    <a href="" class="login-btn" id="signup-btn">Sign Up</a>
-  </form>
-
   <form action="/login" method="post" id="login-form">
-    <input type="email" name="email" placeholder="E-mail">
+    <input type="email" name="email" placeholder="Email">
     <input type="password" name="pass" placeholder="Password">
-    <a href="" class="login-btn">Login</a>
+    <a href="/user/my_kohorts" class="login-btn">Login</a>
   </form>
 
-  <form id="fpass-form">
-    <input type="text" name="forgotten" placeholder="E-mail or phone number">
-    <a href="#" class="login-btn" id="getpass-btn">Get Password</a>
-  </form>
+<div class="other-options">
+<!--
+    <div class="option" id="newUser"><a href='/user/register'><p class="option-text">Sign Up</p></a></div> -->
 
-  <div class="other-options">
-    <div class="option" id="newUser"><a ref='/user/register'><p class="option-text">
-      New User</p></a></div>
-    <div class="option" id="fPass"><p class="option-text"> Forgotten password</p></div>
+<div class="option" id="newUser"><p class="option-text"><%= link_to "Sign Up", register_path %></p></div>
+
+<div class="option" id="fPass"><p class="option-text"> Forgot Password</p></div>
   </div>
 </div>

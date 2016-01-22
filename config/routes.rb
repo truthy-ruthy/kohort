@@ -2,29 +2,13 @@ Rails.application.routes.draw do
 
 root to: 'user#login'
 
- # get 'application/homepage'
+# get 'faq' => ''
+# get 'contact' => ''
 
-  get 'kohort/join_kohort'
+get 'register' => 'user#register'
 
-  get 'kohort/leave_kohort'
-
-  get 'kohort/kohort_home'
-
-  get 'user/my_kohorts'
-
-  get 'user/my_account'
-
-  get 'user/login'
-
-  get 'user/logout'
-
-  get 'user/register'
-
-  get 'application/not_authorized'
-
-  get 'application/faq'
-
-
+  resources :users
+  resources :kohorts
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

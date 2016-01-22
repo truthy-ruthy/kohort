@@ -1,29 +1,10 @@
 require 'test_helper'
 
 class UserControllerTest < ActionController::TestCase
-  test "should get my_kohorts" do
-    get :my_kohorts
+  test "should get new" do
+    get :new
     assert_response :success
   end
 
-  test "should get my_account" do
-    get :my_account
-    assert_response :success
-  end
-
-  test "should get login" do
-    get :login
-    assert_response :success
-  end
-
-  test "should get logout" do
-    get :logout
-    assert_response :success
-  end
-
-  test "should get register" do
-    get :register
-    assert_response :success
-  end
 
 end
