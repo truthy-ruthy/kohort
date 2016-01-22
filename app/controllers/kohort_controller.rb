@@ -1,4 +1,8 @@
 class KohortController < ApplicationController
+
+  def my_kohorts
+  end
+
   def join_kohort
   end
 

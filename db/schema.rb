@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160121171536) do
+ActiveRecord::Schema.define(version: 20160122211141) do
 
   create_table "ages", force: :cascade do |t|
     t.string   "age_range"

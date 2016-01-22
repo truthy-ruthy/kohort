@@ -7,7 +7,6 @@
 
   <div class="logo"></div>
 <form action="/user/register" method="post" id="registration-form">
-  <input required type="email" name="email" placeholder="Email">
   <input required type="first_name" name="first_name" placeholder="first_name">
   <select required>
        <option value="" disabled selected>Age Range</option>
@@ -18,7 +17,8 @@
        <option value="5">55-64</option>
        <option value="6">65-74</option>
      </select>
+     <input required type="email" name="email" placeholder="Email">
      <input required type="password" name="pass" placeholder="Password">
   <input required type="password" name="repass" placeholder="Repeat password">
-  <a href="/user/my_kohorts" class= "login-btn" id="signup-btn">Sign Up</a>
+  <a href="kohort/my_kohorts" class= "login-btn" id="signup-btn">Sign Up</a>
 </form>
