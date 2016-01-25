@@ -1,2 +1,56 @@
-<h1>Kohort#join_kohort</h1>
-<p>Find me in app/views/kohort/join_kohort.html.erb</p>
+<div class="mobile-screen">
+  <div class="header">
+    <h1>Join a Kohort</h1>
+  </div>
+
+    <form id="join-form">
+      <select required>
+           <option value="" disabled selected>How often do you want to meet?</option>
+           <option value="1">Daily</option>
+           <option value="2">Weekly</option>
+           <option value="3">Monthly</option>
+           <option value="4">Doesn't Matter</option>
+         </select>
+      <select required>
+            <option value="" disabled selected>Time of Day</option>
+            <option value="1">Morning</option>
+            <option value="2">Afternoon</option>
+            <option value="3">Doesn't Matter</option>
+          </select>
+      <select required>
+            <option value="" disabled selected>Co-ed?</option>
+            <option value="1">Yes</option>
+            <option value="2">No</option>
+            <option value="3">Doesn't Matter</option>
+            </select>
+      <select required>
+            <option value="" disabled selected>What field do you work in?</option>
+            <option value="1">Advertising</option>
+            <option value="2">The Arts</option>
+            <option value="3">E-Commerce</option>
+            <option value="4">Education</option>
+            <option value="5">Engineering</option>
+            <option value="6">Finance</option>
+            <option value="7">Healthcare</option>
+            <option value="8">IT/Tech</option>
+            <option value="9">Law</option>
+            <option value="10">Manufacturing</option>
+            <option value="11">Law</option>
+            <option value="12">Non-Profit</option>
+            <option value="13">Real Estate</option>
+            <option value="14">Sales</option>
+            <option value="15">Science</option>
+            <option value="16">Sports</option>
+            <option value="17">Student</option>
+            <option value="18">Other</option>
+            </select>
+      <select required>
+            <option value="" disabled selected>What do you want from your kohort?</option>
+            <option value="1">My work is dull/tedius- LET'S CHAT!</option>
+            <option value="2">A little of everything- sometimes I   want to chat, other times I need to focus</option>
+            <option value="3">Limited conversation- I need to focus most of the time, but I love having company!</option>
+      </select>
+      <!-- <div class="other-options"> -->
+        <div class="login-btn"><%= link_to "put me in a kohort!", kohorts_path %></div>
+      <!-- </div> -->
+    </form>

@@ -15,8 +15,8 @@ $("#newUser").click(function(){
 $("#signup-btn,#getpass-btn").click(function(){
   $("h1").text("Log in");
   $(".logo").css({
-    "width":"150px",
-    "height":"150px",
+    "width":"75px",
+    "height":"75px",
     "top":"30px"
   });
 
@@ -28,8 +28,8 @@ $("#signup-btn,#getpass-btn").click(function(){
 $("#fPass").click(function(){
   $("h1").text("Forgotten password");
   $(".logo").css({
-    "width":"190px",
-    "height":"190px",
+    "width":"75px",
+    "height":"75px",
     "top":"40px"
   });
 

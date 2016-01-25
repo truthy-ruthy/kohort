@@ -1,13 +1,10 @@
-<head>
-  <script type="text/javascript" src="/assets/user.js"></script>
-</head>
-
+<nav>
+  <div class="logo"></div>
+</nav>
 <div class="mobile-screen">
   <div class="header">
     <h1>Login</h1>
   </div>
-
-  <div class="logo"></div>
 
   <form id="registration-form">
     <input type="name" name="name" placeholder="First Name">
@@ -20,6 +17,11 @@
          <option value="5">55-64</option>
          <option value="6">65-74</option>
        </select>
+    <select required>
+          <option value="" disabled selected>Gender</option>
+          <option value="1">Female</option>
+          <option value="2">Male</option>
+    </select>
     <input type="email" name="email" placeholder="Email">
     <input type="password" name="pass" placeholder="Password">
     <input type="password" name="repass" placeholder="Repeat password">

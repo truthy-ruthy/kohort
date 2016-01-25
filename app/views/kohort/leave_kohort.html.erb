@@ -1,2 +1,14 @@
-<h1>Kohort#leave_kohort</h1>
-<p>Find me in app/views/kohort/leave_kohort.html.erb</p>
+<div class="mobile-screen">
+  <div class="header">
+    <h1>Are you sure?</h1>
+  </div>
+  <h3 class='leave'>Once you leave a kohort, you cannot be added back to it.</h3>
+
+
+    <div class="other-option">
+      <div class="login-btn"><%= link_to "YES - leave kohort", kohorts_path %></div>
+    </div>
+   <div class="other-option">
+    <div class="login-btn"><%= link_to "NO - take me back", kohort_path %></div>
+  </div>
+</div>
