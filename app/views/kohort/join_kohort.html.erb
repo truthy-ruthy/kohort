@@ -4,6 +4,7 @@
   </div>
 
     <form id="join-form">
+      <div class="select">
       <select required>
            <option value="" disabled selected>How often do you want to meet?</option>
            <option value="1">Daily</option>
@@ -11,18 +12,23 @@
            <option value="3">Monthly</option>
            <option value="4">Doesn't Matter</option>
          </select>
+      <div class="select">
       <select required>
             <option value="" disabled selected>Time of Day</option>
             <option value="1">Morning</option>
             <option value="2">Afternoon</option>
             <option value="3">Doesn't Matter</option>
           </select>
+          </div>
+          <div class="select">
       <select required>
             <option value="" disabled selected>Co-ed?</option>
             <option value="1">Yes</option>
             <option value="2">No</option>
             <option value="3">Doesn't Matter</option>
             </select>
+          </div>
+      <div class="select">
       <select required>
             <option value="" disabled selected>What field do you work in?</option>
             <option value="1">Advertising</option>
@@ -44,13 +50,15 @@
             <option value="17">Student</option>
             <option value="18">Other</option>
             </select>
+          </div>
+          <div class="select">
       <select required>
             <option value="" disabled selected>What do you want from your kohort?</option>
             <option value="1">My work is dull/tedius- LET'S CHAT!</option>
             <option value="2">A little of everything- sometimes I   want to chat, other times I need to focus</option>
             <option value="3">Limited conversation- I need to focus most of the time, but I love having company!</option>
       </select>
-      <!-- <div class="other-options"> -->
+    </div>
         <div class="login-btn"><%= link_to "put me in a kohort!", kohorts_path %></div>
-      <!-- </div> -->
+        </div>
     </form>

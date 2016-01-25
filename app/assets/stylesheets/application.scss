@@ -22,8 +22,8 @@ body, html {
   color: red;
 }
 //
-// nav{
-//   background-image: url("http://i.imgur.com/4F2rQVA.gif") no-repeat center center fixed;
+//  nav{
+//   background: url(http://i.imgur.com/4F2rQVA.gif) no-repeat center;
 //   background-size: 10%;
 //   color: #3e2f12;
 //   font-weight: bold;
@@ -36,7 +36,7 @@ body, html {
   top: 0; left: 0; bottom: 0; right: 0;
   width: 225px;
   height: 415px;
-  background: rgba(98, 82, 72, .85);
+  background: rgba(60, 46, 38, 0.85);
   overflow: hidden;
 }
 
@@ -70,10 +70,10 @@ h1{
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  // -webkit-transition: all .2s ease-in-out;
-  // -moz-transition: all .2s ease-in-out;
-  // -o-transition: all .2s ease-in-out;
-  // transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 form{
@@ -192,6 +192,11 @@ a{
 .leave {
   color: rgb(120, 163, 221);
 }
+
+.select {
+  align-content: center;
+}
+
 
 footer {
   position: bottom-right;

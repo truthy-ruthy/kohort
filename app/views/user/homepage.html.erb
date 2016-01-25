@@ -7,7 +7,7 @@
   </div>
 
   <form id="registration-form">
-    <input type="name" name="name" placeholder="First Name">
+    <input required type="name" name="name" placeholder="First Name">
     <select required>
          <option value="" disabled selected>Age Range</option>
          <option value="1">18-24</option>
@@ -22,9 +22,9 @@
           <option value="1">Female</option>
           <option value="2">Male</option>
     </select>
-    <input type="email" name="email" placeholder="Email">
-    <input type="password" name="pass" placeholder="Password">
-    <input type="password" name="repass" placeholder="Repeat password">
+    <input required type="email" name="email" placeholder="Email">
+    <input required type="password" name="pass" placeholder="Password">
+    <input required type="password" name="repass" placeholder="Repeat password">
     <div class="login-btn" id="signup-btn"><%= link_to "Sign Up", kohorts_path %></div>
 
   </form>
@@ -46,3 +46,4 @@
   </div>
 
 </div>
+<footer>&copy 2016 truthy-ruthy</footer>

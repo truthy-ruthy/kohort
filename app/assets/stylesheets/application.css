@@ -26,7 +26,7 @@ body, html {
   right: 0;
   width: 225px;
   height: 415px;
-  background: rgba(98, 82, 72, 0.85);
+  background: rgba(60, 46, 38, 0.85);
   overflow: hidden; }
 
 .header {
@@ -56,7 +56,11 @@ h1 {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; }
+  background-size: cover;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out; }
 
 form {
   position: absolute;
@@ -159,6 +163,9 @@ a {
 
 .leave {
   color: #78a3dd; }
+
+.select {
+  align-content: center; }
 
 footer {
   position: bottom-right;
