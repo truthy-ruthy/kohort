@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_secure_password
-  has_many :age :gender
+  has_many :ages :genders
 
 
   # attr_accessor :first_name, :email
