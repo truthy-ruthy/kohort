@@ -7,8 +7,8 @@
   </div>
 
   <form id="registration-form">
-    <input required type="name" name="name" placeholder="First Name">
-    <select required>
+    <input class="required" type="name" name="name" placeholder="First Name">
+    <select class="required">
          <option value="" disabled selected>Age Range</option>
          <option value="1">18-24</option>
          <option value="2">25-34</option>
@@ -17,26 +17,26 @@
          <option value="5">55-64</option>
          <option value="6">65-74</option>
        </select>
-    <select required>
+    <select class="required">
           <option value="" disabled selected>Gender</option>
           <option value="1">Female</option>
           <option value="2">Male</option>
     </select>
-    <input required type="email" name="email" placeholder="Email">
-    <input required type="password" name="pass" placeholder="Password">
-    <input required type="password" name="repass" placeholder="Repeat password">
+    <input class="required" type="email" name="email" placeholder="Email">
+    <input class="required" type="password" name="pass" placeholder="Password">
+    <input class="required" type="password" name="repass" placeholder="Repeat password">
     <div class="login-btn" id="signup-btn"><%= link_to "Sign Up", kohorts_path %></div>
 
   </form>
 
   <form id="login-form">
-    <input type="email" name="email" placeholder="Email">
-    <input type="password" name="pass" placeholder="Password">
+    <input type="email" class="required" name="email" placeholder="Email">
+    <input type="password" class="required" name="pass" placeholder="Password">
     <div class="login-btn"><%= link_to "Sign In", kohorts_path %></div>
   </form>
 
   <form id="fpass-form">
-    <input type="text" name="forgotten" placeholder="Email or phone number">
+    <input type="text" class="required" name="forgotten" placeholder="Email or phone number">
     <a href="#" class="login-btn" id="getpass-btn">Get Password</a>
   </form>
 
