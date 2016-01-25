@@ -6,28 +6,26 @@
     <h1>Login</h1>
   </div>
 
-  <form id="registration-form">
-    <input class="required" type="name" name="name" placeholder="First Name">
-    <select class="required">
-         <option value="" disabled selected>Age Range</option>
-         <option value="1">18-24</option>
-         <option value="2">25-34</option>
-         <option value="3">35-44</option>
-         <option value="4">45-54</option>
-         <option value="5">55-64</option>
-         <option value="6">65-74</option>
-       </select>
-    <select class="required">
-          <option value="" disabled selected>Gender</option>
-          <option value="1">Female</option>
-          <option value="2">Male</option>
-    </select>
-    <input class="required" type="email" name="email" placeholder="Email">
-    <input class="required" type="password" name="pass" placeholder="Password">
-    <input class="required" type="password" name="repass" placeholder="Repeat password">
-    <div class="login-btn" id="signup-btn"><%= link_to "Sign Up", kohorts_path %></div>
 
-  </form>
+    <%= form_for :user, :html => { :id => 'registration-form' } do |f| %>
+      <%= label_tag(:q, "") %>
+      <%= text_field_tag(:q, "First Name") %>
+      <%= label_tag(:q, '') %>
+      <%= text_field_tag(:q, "Email") %>
+      <%= select_tag(:user_age_id, options_for_select([['18-24', 1], ['25-34', 2], ['35-44', 3], ['45-54', 4], ['55-64', 5], ['65-75', 6]])) %>
+      <%= select_tag(:user_gender_id, options_for_select([['Female', 1], ['Male', 2]])) %>
+      <%= label_tag(:q, '') %>
+      <%= text_field_tag(:q, "Password") %>
+      <%= label_tag(:q, '') %>
+      <%= text_field_tag(:q, "Confirm Password") %>
+      <%= f.submit %>
+    <% end %>
+
+
+    <!-- <input class="required" type="name" name="name" placeholder="First Name">
+
+    <div class="login-btn" id="signup-btn"><%= link_to "Sign Up", kohorts_path %></div> -->
+
 
   <form id="login-form">
     <input type="email" class="required" name="email" placeholder="Email">
