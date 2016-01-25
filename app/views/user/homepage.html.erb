@@ -1,0 +1,46 @@
+<head>
+  <script type="text/javascript" src="/assets/user.js"></script>
+</head>
+
+<div class="mobile-screen">
+  <div class="header">
+    <h1>Login</h1>
+  </div>
+
+  <div class="logo"></div>
+
+  <form id="registration-form">
+    <input type="name" name="name" placeholder="First Name">
+    <select required>
+         <option value="" disabled selected>Age Range</option>
+         <option value="1">18-24</option>
+         <option value="2">25-34</option>
+         <option value="3">35-44</option>
+         <option value="4">45-54</option>
+         <option value="5">55-64</option>
+         <option value="6">65-74</option>
+       </select>
+    <input type="email" name="email" placeholder="Email">
+    <input type="password" name="pass" placeholder="Password">
+    <input type="password" name="repass" placeholder="Repeat password">
+    <div class="login-btn" id="signup-btn"><%= link_to "Sign Up", kohorts_path %></div>
+
+  </form>
+
+  <form id="login-form">
+    <input type="email" name="email" placeholder="Email">
+    <input type="password" name="pass" placeholder="Password">
+    <div class="login-btn"><%= link_to "Sign In", kohorts_path %></div>
+  </form>
+
+  <form id="fpass-form">
+    <input type="text" name="forgotten" placeholder="Email or phone number">
+    <a href="#" class="login-btn" id="getpass-btn">Get Password</a>
+  </form>
+
+  <div class="other-options">
+    <div class="option" id="newUser"><p class="option-text">New User</p></div>
+    <div class="option" id="fPass"><p class="option-text"> Forgot password</p></div>
+  </div>
+
+</div>

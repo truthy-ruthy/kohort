@@ -1,6 +1,7 @@
 class KohortController < ApplicationController
 
-  def my_kohorts
+  def index
+    # @kohorts = Kohort.all
   end
 
   def join_kohort

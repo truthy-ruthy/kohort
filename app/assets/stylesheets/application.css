@@ -142,6 +142,10 @@ a {
   font-size: 12px;
   font-weight: 100; }
 
+#fpass-form,
+#registration-form {
+  display: none; }
+
 /* Change colors container */
 .change-colors-container {
   position: absolute;
