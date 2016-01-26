@@ -5,11 +5,13 @@ class UserController < ApplicationController
     flash[:success] = "Welcome Back!"
   end
 
+# login
   def new
     @user= User.new
-    render 'homepage'
+    render 'kohort/my_kohorts'
   end
 
+# register
   def create
     @user = User.new(user_params)
     p params

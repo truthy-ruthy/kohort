@@ -25,7 +25,8 @@
       <%= f.submit %>
     <% end %>
 
-  <%= form_for @user, :html => { :id => 'login-form' } do |f| %>
+
+  <%= form_for(:session, url: login_path, :html => { :id => 'login-form' }) do |f| %>
   <%= render 'shared/error_messages' %>
   <%= f.text_field :email, class: "", placeholder: "Email" %>
   <%= f.text_field :password_digest, class: "", placeholder: "Password" %>
