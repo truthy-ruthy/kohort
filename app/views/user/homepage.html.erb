@@ -1,32 +1,34 @@
 <nav>
   <div class="logo"></div>
 </nav>
+
+<!-- <div class="mobile-screen-left">
+  <div class="header">
+    <h1>About</h1>
+  </div> -->
+
 <div class="mobile-screen">
   <div class="header">
     <h1>Login</h1>
   </div>
 
-    <%= form_for(User.new, :url => kohorts_path, :html => { :id => 'registration-form' }) do |f| %>      <%= label_tag(:q, "") %>
-      <%= text_field_tag(:q, "First Name") %>
-      <%= label_tag(:q, '') %>
-      <%= text_field_tag(:q, "Email") %>
+
+
+    <%= form_for @user, :html => { :id => 'registration-form' } do |f| %>
+    <%= render 'shared/error_messages' %>
+      <%= f.text_field :first_name, class: '', placeholder: "First Name" %>
+      <%= f.text_field :email, class: '', placeholder: "Email" %>
       <%= select_tag(:user_age_id, options_for_select([['Age', 0], ['18-24', 1], ['25-34', 2], ['35-44', 3], ['45-54', 4], ['55-64', 5], ['65-75', 6]])) %>
       <%= select_tag(:user_gender_id, options_for_select([['Gender', 0],['Female', 1], ['Male', 2]])) %>
-      <%= label_tag(:q, '') %>
-      <%= text_field_tag(:q, "Password") %>
-      <%= label_tag(:q, '') %>
-      <%= text_field_tag(:q, "Confirm Password") %>
+      <%= f.text_field :password_digest, class: "", placeholder: "Password" %>
+      <%= f.text_field :password_confirmation, class: "", placeholder: "Confirm Password" %>
       <%= f.submit %>
     <% end %>
 
-    <!-- <input class="required" type="name" name="name" placeholder="First Name">
-    <div class="login-btn" id="signup-btn"><%= link_to "Sign Up", kohorts_path %></div> -->
-
-  <%= form_for :users, :html => { :id => 'login-form' } do |f| %>
-    <%= text_field_tag(:q, "Email") %>
-    <%= label_tag(:q, '') %>
-    <%= text_field_tag(:q, "Password") %>
-    <%= label_tag(:q, '') %>
+  <%= form_for @user, :html => { :id => 'login-form' } do |f| %>
+  <%= render 'shared/error_messages' %>
+  <%= f.text_field :email, class: "", placeholder: "Email" %>
+  <%= f.text_field :password_digest, class: "", placeholder: "Password" %>
   <%= f.submit %>
 <% end %>
 

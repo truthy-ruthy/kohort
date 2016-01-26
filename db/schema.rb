@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160125210305) do
+ActiveRecord::Schema.define(version: 20160126173055) do
 
   create_table "ages", force: :cascade do |t|
     t.string   "age_range"
@@ -43,19 +43,6 @@ ActiveRecord::Schema.define(version: 20160125210305) do
     t.string   "gender"
   end
 
-  create_table "groups", force: :cascade do |t|
-    t.integer  "zip_code"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.integer  "age_id"
-    t.integer  "coed_id"
-    t.integer  "daytime_id"
-    t.integer  "frequencie_id"
-    t.integer  "interaction_id"
-    t.integer  "industrie_id"
-    t.integer  "user_id"
-  end
-
   create_table "industries", force: :cascade do |t|
     t.string   "field"
     t.datetime "created_at", null: false
@@ -66,6 +53,19 @@ ActiveRecord::Schema.define(version: 20160125210305) do
     t.string   "conversation_level"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+  end
+
+  create_table "kohorts", force: :cascade do |t|
+    t.integer  "zip_code"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "age_id"
+    t.integer  "coed_id"
+    t.integer  "daytime_id"
+    t.integer  "frequencie_id"
+    t.integer  "interaction_id"
+    t.integer  "industrie_id"
+    t.integer  "user_id"
   end
 
   create_table "users", force: :cascade do |t|

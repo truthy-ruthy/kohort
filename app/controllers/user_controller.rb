@@ -2,33 +2,44 @@ class UserController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    debugger
+    flash[:success] = "Welcome Back!"
   end
 
   def new
     @user= User.new
+    render 'homepage'
   end
 
   def create
-    @user = User.new(params[:user])
+    @user = User.new(user_params)
     p params
     if @user.save
-
+      flash[:success] = "Welcome!"
+      redirect_to kohorts_path
     else
-      render 'new'
+      render 'homepage'
     end
   end
 
-  def my_account
-  end
+  private
 
-  def login
+    def user_params
+        params.require(:user).permit(:first_name, :email, :password_digest,  :password_confirmation, :age_id, :gender_id)
+      end
 
- end
 
-  def logout
-  end
 
-  def register
-  end
+ #
+ #  def my_account
+ #  end
+ #
+ #  def login
+ #
+ # end
+ #
+ #  def logout
+ #  end
+ #
+ #  def register
+ #  end
 end

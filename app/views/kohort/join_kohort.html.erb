@@ -3,10 +3,11 @@
     <h1>Join a Kohort</h1>
   </div>
 
-  <!-- <%= form_for :kohorts, :url => kohorts_path, :html => { :id => 'join-form' }) do |f| %> -->
+
+    <%= form_for(Kohort.new, :url => kohorts_path, :html => { :id => 'registration-form' }) do |f| %>
     <%= select_tag(:kohort_frequency_id, options_for_select([['How often do you want to meet up?', 0], ['Daily', 1], ['Weekly', 2], ['Monthly', 3], ['Doesn\'t matter', 4]])) %>
     <%= select_tag(:kohort_daytime_id, options_for_select([['Time of Day', 0],['Morning', 1], ['Afternoon', 2], ['Evening', 3], ['Late Night', 4], ['Doesn\'t Matter', 5]])) %>
-    <%= text_field_tag(:q, "Zip Code") %>
+    <%= text_field_tag(:q, "Zip") %>
     <%= label_tag(:q, '') %>
     <%= select_tag(:kohort_coed_id, options_for_select([['Coed?', 0],['Yes', 1], ['No', 2], ['Doesn\'t Matter', 3]])) %>
     <%= select_tag(:kohort_industry_id, options_for_select([['What field do you work in?', 0],['Advertising', 1], ['The Arts', 2], ['E-Commerce', 3], ['Education', 4], ['Engineering', 5], ['Finance', 6], ['Healthcare', 7], ['IT/Tech', 8],
