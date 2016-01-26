@@ -3,61 +3,14 @@
     <h1>Join a Kohort</h1>
   </div>
 
-    <form id="join-form">
-      <div class="select">
-      <select required>
-           <option value="" disabled selected>How often do you want to meet?</option>
-           <option value="1">Daily</option>
-           <option value="2">Weekly</option>
-           <option value="3">Monthly</option>
-           <option value="4">Doesn't Matter</option>
-         </select>
-      <div class="select">
-      <select required>
-            <option value="" disabled selected>Time of Day</option>
-            <option value="1">Morning</option>
-            <option value="2">Afternoon</option>
-            <option value="3">Doesn't Matter</option>
-          </select>
-          </div>
-          <div class="select">
-      <select required>
-            <option value="" disabled selected>Co-ed?</option>
-            <option value="1">Yes</option>
-            <option value="2">No</option>
-            <option value="3">Doesn't Matter</option>
-            </select>
-          </div>
-      <div class="select">
-      <select required>
-            <option value="" disabled selected>What field do you work in?</option>
-            <option value="1">Advertising</option>
-            <option value="2">The Arts</option>
-            <option value="3">E-Commerce</option>
-            <option value="4">Education</option>
-            <option value="5">Engineering</option>
-            <option value="6">Finance</option>
-            <option value="7">Healthcare</option>
-            <option value="8">IT/Tech</option>
-            <option value="9">Law</option>
-            <option value="10">Manufacturing</option>
-            <option value="11">Non-Profit</option>
-            <option value="12">Real Estate</option>
-            <option value="13">Sales</option>
-            <option value="14">Science</option>
-            <option value="15">Sports</option>
-            <option value="16">Student</option>
-            <option value="17">Other</option>
-            </select>
-          </div>
-          <div class="select">
-      <select required>
-            <option value="" disabled selected>What do you want from your kohort?</option>
-            <option value="1">My work is dull/tedius- LET'S CHAT!</option>
-            <option value="2">A little of everything- sometimes I   want to chat, other times I need to focus</option>
-            <option value="3">Limited conversation- I need to focus most of the time, but I love having company!</option>
-      </select>
-    </div>
-        <div class="login-btn"><%= link_to "put me in a kohort!", kohorts_path %></div>
-        </div>
-    </form>
+  <!-- <%= form_for :kohorts, :url => kohorts_path, :html => { :id => 'join-form' }) do |f| %> -->
+    <%= select_tag(:kohort_frequency_id, options_for_select([['How often do you want to meet up?', 0], ['Daily', 1], ['Weekly', 2], ['Monthly', 3], ['Doesn\'t matter', 4]])) %>
+    <%= select_tag(:kohort_daytime_id, options_for_select([['Time of Day', 0],['Morning', 1], ['Afternoon', 2], ['Evening', 3], ['Late Night', 4], ['Doesn\'t Matter', 5]])) %>
+    <%= text_field_tag(:q, "Zip Code") %>
+    <%= label_tag(:q, '') %>
+    <%= select_tag(:kohort_coed_id, options_for_select([['Coed?', 0],['Yes', 1], ['No', 2], ['Doesn\'t Matter', 3]])) %>
+    <%= select_tag(:kohort_industry_id, options_for_select([['What field do you work in?', 0],['Advertising', 1], ['The Arts', 2], ['E-Commerce', 3], ['Education', 4], ['Engineering', 5], ['Finance', 6], ['Healthcare', 7], ['IT/Tech', 8],
+    ['Law', 9], ['Manufacturing', 10], ['Non-Profit', 11], ['Real Estate', 12], ['Sales', 13], ['Science', 14], ['Sports', 15], ['Student', 16], ['Other', 17]])) %>
+    <%= select_tag(:kohort_conversation_id, options_for_select([['What would you like from your kohort?', 0], ['My work is dull/tedius- LET\'S CHAT!', 1], ['A little of everything- sometimes I want to chat, other times I need to focus', 2], ['Limited conversation- I need to focus most of the time, but I love having company!', 3]])) %>
+    <%= f.submit %>
+  <% end %>

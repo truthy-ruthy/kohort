@@ -4,12 +4,17 @@ class KohortController < ApplicationController
     # @kohorts = Kohort.all
   end
 
-  def join_kohort
+  def new
+    @kohort= Kohort.new
   end
 
-  def leave_kohort
-  end
-
-  def kohort_home
-  end
+  # def join_kohort
+  #
+  # end
+  #
+  # def leave_kohort
+  # end
+  #
+  # def kohort_home
+  # end
 end

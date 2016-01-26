@@ -10,7 +10,6 @@ get 'leave' => 'kohort#leave_kohort'
 get 'logout' => 'user#homepage'
 
 
-
   resources :users, :kohorts
 
 
