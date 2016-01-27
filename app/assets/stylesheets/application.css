@@ -25,17 +25,17 @@ body, html {
   bottom: 0;
   right: 0;
   width: 650px;
-  height: 415px;
+  height: 400px;
   background: rgba(60, 46, 38, 0.85);
   overflow: hidden; }
 
 .left-panel {
-  margin-right: 300px;
-  width: 225px; }
+  margin-right: 375px;
+  width: 200px; }
 
 .right-panel {
-  margin-left: 275px;
-  width: 250px; }
+  margin-left: 380px;
+  width: 200px; }
 
 .header {
   position: relative;
@@ -90,11 +90,15 @@ input,
 input {
   border: none;
   border-left: 5px solid;
+  border-right: 5px solid;
   background: none;
   border-color: #6a8f4e;
   color: #fff;
   font-weight: 300;
   font-size: 18px;
+  padding: 5px;
+  margin-top: 40px;
+  margin: 5px;
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   -o-transition: all .2s ease-in-out;
@@ -153,7 +157,9 @@ a {
 
 #fpass-form,
 #registration-form {
-  display: none; }
+  display: none;
+  height: 300px;
+  margin-top: 40px; }
 
 /* Change colors container */
 .change-colors-container {

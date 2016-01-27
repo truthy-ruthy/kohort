@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 $("#newUser").click(function(){
-  $("h1").text("Registration");
+  $(".right-header").text("Registration");
   $(".logo").css({
     "width":"75px",
     "height":"75px",
@@ -25,7 +25,7 @@ $("#newUser").click(function(){
 // });
 
 $("#fPass").click(function(){
-  $("h1").text("Forgotten password");
+  $(".right-header").text("Forgot password");
   $(".logo").css({
     "width":"75px",
     "height":"75px",

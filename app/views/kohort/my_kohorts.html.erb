@@ -2,7 +2,7 @@
   <div class="header">
     <h1>My Kohorts</h1>
   </div>
-  <div class="">
+  <div class="left-panel">
     <div class="">
       <button type="button" name="button"><%= link_to "kohort with name, name & name", kohort_path %></button>
       <button type="button" name="button">kohort</button>
@@ -10,9 +10,15 @@
     </div>
   </div>
 
-    <div class="other-option">
-      <div class="login-btn"><%= link_to "join a kohort", join_path, method: :get %></div>
-    </div>
+<div class="right-panel">
+  <%= select_tag(:kohort_frequency_id, options_for_select([['How often do you want to meet up?', 0], ['Daily', 1], ['Weekly', 2], ['Monthly', 3], ['Doesn\'t matter', 4]])) %>
+  <%= select_tag(:kohort_daytime_id, options_for_select([['Time of Day', 0],['Morning', 1], ['Afternoon', 2], ['Evening', 3], ['Late Night', 4], ['Doesn\'t Matter', 5]])) %>
+  <%= text_field_tag(:q, "Zip") %>
+  <%= label_tag(:q, '') %>
+  <%= select_tag(:kohort_coed_id, options_for_select([['Coed?', 0],['Yes', 1], ['No', 2], ['Doesn\'t Matter', 3]])) %>
+  <%= select_tag(:kohort_industry_id, options_for_select([['What field do you work in?', 0],['Advertising', 1], ['The Arts', 2], ['E-Commerce', 3], ['Education', 4], ['Engineering', 5], ['Finance', 6], ['Healthcare', 7], ['IT/Tech', 8],
+  ['Law', 9], ['Manufacturing', 10], ['Non-Profit', 11], ['Real Estate', 12], ['Sales', 13], ['Science', 14], ['Sports', 15], ['Student', 16], ['Other', 17]])) %>
+  <%= select_tag(:kohort_conversation_id, options_for_select([['What would you like from your kohort?', 0], ['My work is dull/tedius- LET\'S CHAT!', 1], ['A little of everything- sometimes I want to chat, other times I need to focus', 2], ['Limited conversation- I need to focus most of the time, but I love having company!', 3]])) %>
 <% if @current_user %>
     <%= link_to "Log out", "/logout/#{@current_user.id}", method: :delete %>
 <%end%>
