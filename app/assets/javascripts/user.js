@@ -24,17 +24,17 @@ $("#newUser").click(function(){
 //   // $(".other-options").fadeIn(200);
 // });
 
-$("#fPass").click(function(){
-  $(".right-header").text("Forgot password");
-  $(".logo").css({
-    "width":"75px",
-    "height":"75px",
-    "top":"10px"
-  });
-
-  $("#login-form").fadeOut(150);
-  $("#fpass-form").delay(200).fadeIn(200);
-  $(".other-options").fadeOut(200);
-});
+// $("#fPass").click(function(){
+//   $(".right-header").text("Forgot password");
+//   $(".logo").css({
+//     "width":"75px",
+//     "height":"75px",
+//     "top":"10px"
+//   });
+//
+//   $("#login-form").fadeOut(150);
+//   $("#fpass-form").delay(200).fadeIn(200);
+//   $(".other-options").fadeOut(200);
+// });
 
 });

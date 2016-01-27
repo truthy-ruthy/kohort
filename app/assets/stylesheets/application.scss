@@ -43,21 +43,37 @@ body, html {
 }
 
 .left-panel{
-  margin-right: 375px;
-  width: 200px;
+  float: left;
+  width: 300px;
 
 }
 
 .right-panel{
-  margin-left: 380px;
-  width: 200px;
+  float: right;
+  width: 300px;
 }
 
-.header{
+// .header{
+//   position: relative;
+//   margin: 0;
+//   padding: 0;
+//   width: 100%;
+//   height: auto;
+//   background: rgba(3,3,3,.1);
+// }
+
+.left-header{
   position: relative;
-  margin: 0;
-  padding: 0;
-  width: 100%;
+  padding: 20px;
+  width: auto;
+  height: auto;
+  background: rgba(3,3,3,.1);
+}
+
+.right-header{
+  position: relative;
+  padding: 20px;
+  width: auto;
   height: auto;
   background: rgba(3,3,3,.1);
 }
@@ -150,6 +166,7 @@ a{
   height: 30px;
   bottom: 2px;
   left: 0;
+  margin-left: 315px;
 }
 
 .option{
@@ -186,7 +203,6 @@ a{
 }
 
 #fpass-form,
-
 #registration-form{
   display: none;
   height: 300px;

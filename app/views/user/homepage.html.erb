@@ -9,18 +9,16 @@
 
 <div class="mobile-screen">
 
-  <div class="row">
-    <h1>Why Kohort?</h1>
-    <h1 class="right-header">Login</h1>
-      </div>
 
     <div class="row">
 
-
-  <div class="left-panel" class="five columns">
+  <div class="left-panel">
+    <h1 class="left-header">Why Kohort?</h1>
+    <footer>&copy 2016 truthy-ruthy</footer>
   </div>
 
-<div class="right-panel" class="five columns">
+<div class="right-panel">
+  <h1 class="right-header">Login</h1>
     <%= form_for @user =User.new, :html => { :id => 'registration-form' } do |f| %>
     <%= render 'shared/error_messages' %>
       <%= f.text_field :first_name, class: '', placeholder: "First Name" %>
@@ -40,21 +38,20 @@
   <%= f.text_field :password, class: "", placeholder: "Password" %>
   <%= f.submit %>
 <% end %>
+
+<div class="other-options" class="right-panel">
+  <div class="option" id="newUser"><p class="option-text">Sign Up!</p></div>
+</div>
 </div>
 
 
-<div class="right-panel" class="five columns">
+<!-- <div class="right-panel" class="five columns">
   <form id="fpass-form">
     <input type="text" class="required" name="forgotten" placeholder="Email">
     <a href="#" class="login-btn" id="getpass-btn">Get Password</a>
   </form>
-  </div>
+  </div> -->
 
-  <div class="other-options" class="right-panel">
-    <div class="option" id="newUser"><p class="option-text">Join Kohort!</p></div>
-    <div class="option" id="fPass"><p class="option-text"> Forgot password</p></div>
-  </div>
+
 </div>
-<div class="row">
-  <footer>&copy 2016 truthy-ruthy</footer>
 </div>
