@@ -7,14 +7,16 @@ root to: 'user#new'
 # get 'register' => 'user#homepage'
 get 'kohorts' => 'kohort#my_kohorts'
 get 'join' => 'kohort#join_kohort'
+post 'join' => 'kohort#join_kohort'
 get 'kohort' => 'kohort#kohort_home'
 get 'leave' => 'kohort#leave_kohort'
 get 'logout' => 'user#homepage'
 post 'users' => 'user#create'
 get    'login'   => 'sessions#new'
 post   'login'   => 'sessions#create'
-delete 'logout'  => 'sessions#destroy'
-post 'logout'  => 'user#new'
+delete 'logout/:id'  => 'sessions#destroy'
+get '/force' => 'user#force'
+
 
 
   resources :users, :kohorts, :sessions

@@ -4,12 +4,14 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(email: params[:session][:email].downcase) if user && user.authenticate(params[:session][:password])
-      login_user
+    user = User.find_by(email:params[:session][:email])
+    if user && user.authenticate(params[:session][:password])
+      log_in user
+      flash[:danger] = "Welcome back!"
       redirect_to kohorts_path
     else
       flash[:danger] = "Invalid email/password combination"
-      render 'homepage'
+      render 'user/homepage.html.erb'
     end
   end
 

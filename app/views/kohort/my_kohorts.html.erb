@@ -10,12 +10,11 @@
     </div>
   </div>
 
-
-
     <div class="other-option">
-      <div class="login-btn"><%= link_to "join a kohort", join_path %></div>
+      <div class="login-btn"><%= link_to "join a kohort", join_path, method: :get %></div>
     </div>
-
-    <%= link_to "Log out", logout_path, method: :delete %>
-
+<% if @current_user %>
+    <%= link_to "Log out", "/logout/#{@current_user.id}", method: :delete %>
+<%end%>
+  <a href="/force"> logout </a>
   </div>

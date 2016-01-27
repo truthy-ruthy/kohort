@@ -12,24 +12,20 @@
     <h1>Login</h1>
   </div>
 
-
-
-    <%= form_for @user, :html => { :id => 'registration-form' } do |f| %>
-    <%= render 'shared/error_messages' %>
+    <%= form_for @user =User.new, :html => { :id => 'registration-form' } do |f| %>
       <%= f.text_field :first_name, class: '', placeholder: "First Name" %>
       <%= f.text_field :email, class: '', placeholder: "Email" %>
       <%= select_tag(:user_age_id, options_for_select([['Age', 0], ['18-24', 1], ['25-34', 2], ['35-44', 3], ['45-54', 4], ['55-64', 5], ['65-75', 6]])) %>
       <%= select_tag(:user_gender_id, options_for_select([['Gender', 0],['Female', 1], ['Male', 2]])) %>
-      <%= f.text_field :password_digest, class: "", placeholder: "Password" %>
+      <%= f.text_field :password, class: "", placeholder: "Password" %>
       <%= f.text_field :password_confirmation, class: "", placeholder: "Confirm Password" %>
       <%= f.submit %>
     <% end %>
 
 
   <%= form_for(:session, url: login_path, :html => { :id => 'login-form' }) do |f| %>
-  <%= render 'shared/error_messages' %>
   <%= f.text_field :email, class: "", placeholder: "Email" %>
-  <%= f.text_field :password_digest, class: "", placeholder: "Password" %>
+  <%= f.text_field :password, class: "", placeholder: "Password" %>
   <%= f.submit %>
 <% end %>
 
