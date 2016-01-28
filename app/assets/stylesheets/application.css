@@ -1,5 +1,5 @@
 body, html {
-  background: url(http://i.imgur.com/8Chj4ZV.jpg) no-repeat center center fixed;
+  background: url(http://i.imgur.com/8Chj4ZV.jpg?1) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -26,29 +26,33 @@ body, html {
   right: 0;
   width: 650px;
   height: 400px;
-  background: rgba(60, 46, 38, 0.85);
-  overflow: hidden; }
+  padding: 15px;
+  background: rgba(60, 46, 38, 0.85); }
 
 .left-panel {
   float: left;
-  width: 300px; }
+  width: 325px;
+  height: 400px; }
 
 .right-panel {
   float: right;
-  width: 300px; }
+  width: 325px;
+  height: 400px; }
 
 .left-header {
   position: relative;
-  padding: 20px;
+  padding: 15px;
   width: auto;
   height: auto;
+  text-align: center;
   background: rgba(3, 3, 3, 0.1); }
 
 .right-header {
   position: relative;
-  padding: 20px;
+  padding: 15px;
   width: auto;
   height: auto;
+  text-align: center;
   background: rgba(3, 3, 3, 0.1); }
 
 h1 {
@@ -57,7 +61,7 @@ h1 {
   text-align: center;
   font-weight: 300;
   font-size: 21px;
-  color: white; }
+  color: #f4e6b5; }
 
 .logo {
   position: relative;
@@ -76,10 +80,19 @@ h1 {
   -o-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out; }
 
+.why {
+  padding: 5px;
+  margin: 30px;
+  color: #d64e0a;
+  width: 250px;
+  display: inline-block;
+  text-align: center; }
+
 form {
   position: absolute;
-  bottom: 50px;
-  width: 200px; }
+  margin: 15px;
+  margin-left: 60px;
+  width: 225px; }
 
 input,
 .login-btn {
@@ -99,7 +112,7 @@ input {
   border-right: 5px solid;
   background: none;
   border-color: #6a8f4e;
-  color: #fff;
+  color: #f4e6b5;
   font-weight: 300;
   font-size: 18px;
   padding: 5px;
@@ -123,22 +136,21 @@ a {
   border-radius: 4px;
   text-align: center;
   background: #6a8f4e;
-  color: #fff; }
+  color: #f4e6b5; }
 
 .other-options {
   position: absolute;
-  width: 100%;
+  float: right;
+  width: 325px;
   height: 30px;
   bottom: 2px;
   left: 0;
-  margin-left: 315px; }
+  margin-left: 325px; }
 
 .option {
   position: relative;
-  display: block;
-  float: right;
-  width: 45%;
-  margin: auto;
+  display: inline;
+  width: 325px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -157,12 +169,11 @@ a {
   position: relative;
   margin: 0;
   line-height: 30px;
-  color: #ccc;
+  color: #f4e6b5;
   text-align: center;
   font-size: 12px;
   font-weight: 100; }
 
-#fpass-form,
 #registration-form {
   display: none;
   height: 300px;
@@ -180,7 +191,7 @@ a {
   background: rgba(106, 143, 78, 0.5); }
 
 .k-mates {
-  color: #78a3dd; }
+  color: #f4e6b5; }
 
 .leave {
   color: #78a3dd; }
@@ -189,8 +200,92 @@ a {
   align-content: center; }
 
 footer {
-  position: bottom-right;
+  position: sticky;
+  text-align: center;
   color: #bec7d2;
-  font-size: 10px; }
+  font-size: 9px;
+  margin-top: 35px; }
+
+.logout {
+  width: 65px;
+  height: 20px;
+  text-align: center;
+  color: #bec7d2;
+  font-size: 10px;
+  padding: 2px;
+  margin-top: 260px; }
+
+#error_explanation {
+  color: red; }
+  #error_explanation ul {
+    color: red;
+    font-size: 20px; }
+
+.field_with_errors .form-control {
+  color: red;
+  font-size: 20px; }
+
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px; }
+
+.select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 12px;
+  color: #fff;
+  width: 220px;
+  height: 40px; }
+
+.select-styled {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #c0392b;
+  padding: 8px 8px; }
+  .select-styled:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-color: #fff transparent transparent transparent;
+    position: absolute;
+    top: 16px;
+    right: 10px; }
+  .select-styled:hover {
+    background-color: #b83729; }
+  .select-styled:active, .select-styled.active {
+    background-color: #ab3326; }
+    .select-styled:active:after, .select-styled.active:after {
+      top: 9px;
+      border-color: transparent transparent #fff transparent; }
+
+.select-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding-left: 1.5em;
+  text-indent: -1.5em;
+  padding-right: 1.5em;
+  list-style: none;
+  background-color: #ab3326; }
+  .select-options li {
+    margin: 0;
+    padding: 12px 0;
+    text-indent: 15px;
+    border-top: 1px solid #962d22; }
+    .select-options li:hover {
+      color: #c0392b;
+      background: #fff; }
+    .select-options li[rel="hide"] {
+      display: none; }
 
 /*# sourceMappingURL=application.css.map */

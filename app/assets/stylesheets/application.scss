@@ -1,7 +1,7 @@
-
+$state-danger-text: red;
 
 body, html {
-  background: url(http://i.imgur.com/8Chj4ZV.jpg) no-repeat center center fixed;
+  background: url(http://i.imgur.com/8Chj4ZV.jpg?1) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -38,19 +38,24 @@ body, html {
   top: 0; left: 0; bottom: 0; right: 0;
   width: 650px;
   height: 400px;
+  padding:15px;
   background: rgba(60, 46, 38, 0.85);
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .left-panel{
   float: left;
-  width: 300px;
+  width: 325px;
+  height: 400px;
 
 }
 
 .right-panel{
   float: right;
-  width: 300px;
+  width: 325px;
+  height: 400px;
+
+
 }
 
 // .header{
@@ -64,17 +69,19 @@ body, html {
 
 .left-header{
   position: relative;
-  padding: 20px;
+  padding: 15px;
   width: auto;
   height: auto;
+  text-align: center;
   background: rgba(3,3,3,.1);
 }
 
 .right-header{
   position: relative;
-  padding: 20px;
+  padding: 15px;
   width: auto;
   height: auto;
+  text-align: center;
   background: rgba(3,3,3,.1);
 }
 
@@ -84,7 +91,7 @@ h1{
   text-align: center;
   font-weight: 300;
   font-size: 21px;
-  color: rgb(255,255,255);
+  color: #f4e6b5;
 }
 
 .logo{
@@ -105,10 +112,20 @@ h1{
   transition: all .2s ease-in-out;
 }
 
+.why{
+  padding: 5px;
+  margin: 30px;
+  color: rgb(214, 78, 10);
+  width: 250px;
+  display: inline-block;
+  text-align: center;
+}
+
 form{
   position: absolute;
-  bottom: 50px;
-  width: 200px;
+  margin: 15px;
+  margin-left: 60px;
+  width: 225px;
 }
 
 input,
@@ -130,7 +147,7 @@ input{
   border-right: 5px solid;
   background: none;
   border-color: rgb(106, 143, 78);
-  color: #fff;
+  color: #f4e6b5;
   font-weight: 300;
   font-size: 18px;
   padding: 5px;
@@ -157,24 +174,23 @@ a{
   border-radius: 4px;
   text-align: center;
   background: rgb(106, 143, 78);
-  color: #fff;
+  color: #f4e6b5;
 }
 
 .other-options{
   position: absolute;
-  width: 100%;
+  float: right;
+  width: 325px;
   height: 30px;
   bottom: 2px;
   left: 0;
-  margin-left: 315px;
+  margin-left: 325px;
 }
 
 .option{
   position: relative;
-  display: block;
-  float: right;
-  width: 45%;
-  margin: auto;
+  display: inline;
+  width: 325px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -196,13 +212,13 @@ a{
   position: relative;
   margin: 0;
   line-height: 30px;
-  color: #ccc;
+  color: #f4e6b5;
   text-align: center;
   font-size: 12px;
   font-weight: 100;
 }
 
-#fpass-form,
+// #fpass-form,
 #registration-form{
   display: none;
   height: 300px;
@@ -222,7 +238,7 @@ a{
 }
 
 .k-mates {
-  color: rgb(120, 163, 221);
+  color: #f4e6b5;
 }
 
 .leave {
@@ -235,7 +251,116 @@ a{
 
 
 footer {
-  position: bottom-right;
+  position: sticky;
+  text-align: center;
+  color: rgb(190, 199, 210);
+  font-size: 9px;
+  margin-top: 35px;
+}
+
+.logout {
+  width: 65px;
+  height: 20px;
+  text-align: center;
   color: rgb(190, 199, 210);
   font-size: 10px;
+  padding: 2px;
+  margin-top: 260px;
+}
+
+
+// # error colors- fix- currently in bootstrap
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    font-size: 20px;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error !optional;
+  .form-control {
+     color: $state-danger-text;
+     font-size: 20px;
+  }
+}
+
+
+$background: #e74c3c;
+$select-color: #fff;
+$select-background: #c0392b;
+$select-width: 220px;
+$select-height: 40px;
+
+.select-hidden {
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+}
+.select {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  font-size: 12px;
+  color: $select-color;
+  width: $select-width;
+  height: $select-height;
+}
+.select-styled {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $select-background;
+  padding: 8px 8px;
+  &:after {
+    content:"";
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-color: $select-color transparent transparent transparent;
+    position: absolute;
+    top: 16px;
+    right: 10px;
+  }
+  &:hover {
+    background-color: darken($select-background, 2);
+  }
+  &:active, &.active {
+    background-color: darken($select-background, 5);
+    &:after {
+      top: 9px;
+      border-color: transparent transparent $select-color transparent;
+    }
+  }
+}
+
+.select-options {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding-left: 1.5em;
+  text-indent:-1.5em;
+  padding-right: 1.5em;
+  list-style: none;
+  background-color: darken($select-background, 5);
+  li {
+    margin: 0;
+    padding: 12px 0;
+    text-indent: 15px;
+    border-top: 1px solid darken($select-background, 10);
+    &:hover {
+      color: $select-background;
+      background: $select-color;
+    }
+    &[rel="hide"] {
+      display: none;
+    }
+  }
 }
