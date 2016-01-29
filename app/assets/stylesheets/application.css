@@ -106,10 +106,10 @@ input,
   font-family: 'Open Sans', sans-serif;
   position: relative;
   display: inline-block;
-  margin-left: 20px;
-  margin-bottom: 35px;
-  padding: 10px;
-  width: 200px;
+  margin-left: 30px;
+  margin-bottom: 5px;
+  padding: 5px;
+  width: 175px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box; }
@@ -195,26 +195,39 @@ a {
 
 .k-mates {
   color: rgba(34, 43, 34, 0.9);
-  background: #a23f20;
-  width: 100px;
+  width: 220px;
   padding: 5px;
   margin: 10px;
+  margin-left: 50px;
   font-color: rgba(34, 43, 34, 0.9); }
 
 .leave {
-  color: rgba(142, 186, 95, 0.5);
-  font-size: 14px; }
+  color: rgba(142, 186, 95, 0.5); }
+
+.chat {
+  border: #a23f20 2px solid;
+  height: 310px;
+  width: 275px;
+  margin-left: 25px; }
 
 .leaveWarning {
   background: rgba(142, 186, 95, 0.5);
   width: 50px;
   padding: 5px;
-  margin: 100px;
   margin-left: 10px;
-  margin-top: 275px; }
+  font-size: 14px; }
 
 .select {
   align-content: center; }
+
+.footer {
+  background: #cbd179;
+  width: 40px;
+  padding: 5px;
+  font-size: 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
 
 footer {
   position: sticky;
@@ -236,7 +249,7 @@ footer {
 .warning {
   border: solid red 2px;
   padding: 2px;
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
   color: white; }
 

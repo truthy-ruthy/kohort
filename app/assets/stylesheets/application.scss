@@ -140,10 +140,10 @@ input,
   font-family: 'Open Sans', sans-serif;
   position: relative;
   display: inline-block;
-  margin-left: 20px;
-  margin-bottom: 35px;
-  padding: 10px;
-  width: 200px;
+  margin-left: 30px;
+  margin-bottom: 5px;
+  padding: 5px;
+  width: 175px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -243,33 +243,46 @@ a{
 
 .k-mates {
   color: $darkGreen;
-  background: $ginger;
-  width: 100px;
+  width: 220px;
   padding: 5px;
   margin: 10px;
+  margin-left: 50px;
   font-color: $darkGreen;
-
 }
 
 
 .leave {
   color: $green;
-  font-size: 14px;
+}
+
+.chat{
+  border: $ginger 2px solid;
+  height: 310px;
+  width: 275px;
+  margin-left: 25px;
 }
 
 .leaveWarning {
   background: $green;
   width: 50px;
   padding: 5px;
-  margin: 100px;
   margin-left: 10px;
-  margin-top: 275px;
+  font-size: 14px;
 }
 
 .select {
   align-content: center;
 }
 
+.footer{
+  background: $ltgreen;
+  width: 40px;
+  padding: 5px;
+  font-size: 8px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
 
 footer {
   position: sticky;
@@ -293,9 +306,10 @@ footer {
 .warning {
   border: solid red 2px;
   padding: 2px;
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
   color:  white;
+
 }
 
 // # error colors- fix- currently in bootstrap
