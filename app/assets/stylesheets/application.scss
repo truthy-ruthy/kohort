@@ -242,11 +242,28 @@ a{
 }
 
 .k-mates {
-  color: $ltgreen;
+  color: $darkGreen;
+  background: $ginger;
+  width: 100px;
+  padding: 5px;
+  margin: 10px;
+  font-color: $darkGreen;
+
 }
+
 
 .leave {
   color: $green;
+  font-size: 14px;
+}
+
+.leaveWarning {
+  background: $green;
+  width: 50px;
+  padding: 5px;
+  margin: 100px;
+  margin-left: 10px;
+  margin-top: 275px;
 }
 
 .select {

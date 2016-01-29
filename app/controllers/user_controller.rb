@@ -13,7 +13,7 @@ class UserController < ApplicationController
 
 # create user
   def create
-    @user = User.create(params[:person])
+    @user = User.new(user_params)
     p user_params
     if (@user != nil && @user.save)
       # log_in @user

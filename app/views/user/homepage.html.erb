@@ -22,8 +22,8 @@
     <%= render 'shared/error_messages' %>
       <%= f.text_field :first_name, :autocomplete => "off", class: '', placeholder: "First Name" %>
       <%= f.text_field :email, :autocomplete => "off", class: '', placeholder: "Email" %>
-      <%= collection_select(:age, :age_id, Age.all, :id, :age_range, :include_blank => "Age") %>
-      <%= collection_select(:gender, :gender_id, Gender.all, :id, :gender, :include_blank => "Gender") %>
+      <%= collection_select(:age, :age_id, Age.all, :id, :age_range, :prompt => "Age") %>
+      <%= collection_select(:gender, :gender_id, Gender.all, :id, :gender, :index => "Gender") %>
         <%= password_field_tag(:password, "", class: "masked_input_field", maxlength: 16, placeholder: "Password") %>
         <%= password_field_tag(:password_confirmation, "", class: "masked_input_field", maxlength: 16, placeholder: "Confirm Password") %>
       <%= submit_tag "Join", class: "login-btn"%>

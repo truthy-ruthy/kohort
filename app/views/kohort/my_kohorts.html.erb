@@ -4,16 +4,13 @@
     <div class="left-header">
       <h1>My Kohorts</h1>
     </div>
-    <div class="">
-      <button type="button" name="button"><%= link_to "kohort with name, name & name", kohort_path %></button>
-      <button type="button" name="button">kohort</button>
-      <button type="button" name="button">kohort</button>
+    <div class="kmates">
+      <div class="k-mates"><%= link_to "name, name & name", kohort_path %></div>
+    <div class="k-mates"><%= link_to "name, name & name", kohort_path %></div>
+    <div class="k-mates"><%= link_to "name, name & name", kohort_path %></div>
     </div>
-      <!-- <button type="button" class="logout">   -->
-        <%= link_to "Log out", logout_path, method: "delete" %>
-<!-- </button> -->
-
-
+      <div class="footer">
+ <%= link_to "Log out", logout_path, method: "delete" %>  </div>
   </div>
 
 <div class="right-panel">
@@ -21,14 +18,14 @@
     <h1>Join a Kohort</h1>
   </div>
   <%= form_for(:kohort, url: kohort_path, :html => { :id => 'join-form' }) do |f| %>
-  <%= collection_select(:frequency, :frequency_id, Frequency.all, :id, :how_often, :include_blank => "Frequency") %>
+      <%= collection_select(:frequency, :frequency_id, Frequency.all, :id, :how_often, :include_blank => "Frequency") %>
   <%= collection_select(:daytime, :daytime_id, Daytime.all, :id, :time_of_day, :include_blank => "Time of Day") %>
   <%= f.text_field :zipcode, :autocomplete => "off", placeholder: "Zip Code" %>
   <%= collection_select(:coeds, :coed_id, Coed.all, :id, :mixed, :include_blank => "Coed") %>
   <%= collection_select(:industries, :industry_id, Industry.all, :id, :field, :include_blank => "Industry/Field") %>
-  <%= collection_select(:interactions, :interaction_id, Interaction.all, :id, :conversation_level, :include_blank => "Industry/Field") %>
+  <%= collection_select(:interactions, :interaction_id, Interaction.all, :id, :conversation_level, :include_blank => "Conversation") %>
   <%= submit_tag "Put me in a kohort!", class: "login-btn"%>
-  <% end %>
+   <% end %>
 
 
   </div>

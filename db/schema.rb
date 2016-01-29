@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160126173055) do
+ActiveRecord::Schema.define(version: 20160129052433) do
 
   create_table "ages", force: :cascade do |t|
     t.string   "age_range"
@@ -62,10 +62,10 @@ ActiveRecord::Schema.define(version: 20160126173055) do
     t.integer  "age_id"
     t.integer  "coed_id"
     t.integer  "daytime_id"
-    t.integer  "frequencie_id"
     t.integer  "interaction_id"
-    t.integer  "industrie_id"
     t.integer  "user_id"
+    t.integer  "industry_id"
+    t.integer  "frequency_id"
   end
 
   create_table "users", force: :cascade do |t|
