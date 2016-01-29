@@ -45,16 +45,14 @@ body, html {
   padding: 15px;
   width: auto;
   height: auto;
-  text-align: center;
-  background: rgba(34, 43, 34, 0.9); }
+  text-align: center; }
 
 .right-header {
   position: relative;
   padding: 15px;
   width: auto;
   height: auto;
-  text-align: center;
-  background: rgba(34, 43, 34, 0.9); }
+  text-align: center; }
 
 h1 {
   margin: 0;
@@ -82,16 +80,23 @@ h1 {
   transition: all .2s ease-in-out; }
 
 .why {
+  background: rgba(34, 43, 34, 0.9);
   padding: 5px;
-  margin: 30px;
-  color: #d64e0a;
+  margin: 25px;
+  color: #a23f20;
   width: 250px;
   display: inline-block;
   text-align: center; }
 
+#newUser {
+  background: rgba(142, 186, 95, 0.5);
+  width: 150px;
+  margin-left: 50px;
+  margin-right: 50px; }
+
 form {
   position: absolute;
-  margin: 15px;
+  margin: 10px;
   height: 300px;
   margin-left: 60px;
   width: 225px; }
@@ -101,7 +106,8 @@ input,
   font-family: 'Open Sans', sans-serif;
   position: relative;
   display: inline-block;
-  margin: 20px auto;
+  margin-left: 20px;
+  margin-bottom: 35px;
   padding: 10px;
   width: 200px;
   box-sizing: border-box;
@@ -201,7 +207,8 @@ footer {
   text-align: center;
   color: #cbd179;
   font-size: 9px;
-  margin-top: 35px; }
+  margin-top: 10px;
+  margin-right: 15px; }
 
 .logout {
   width: 65px;

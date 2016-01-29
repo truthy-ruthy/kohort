@@ -1,27 +1,37 @@
 <div class="mobile-screen">
-  <div class="header">
-    <h1>Kohort with name, name and name</h1>
-  </div>
 
+
+  <div class="left-panel">
+    <button type="button" class=""><%= link_to "all kohorts", kohorts_path %></button>
+    <h1 class="left-header">Kohort Name(kmates)</h1>
   <div class="k-mates">
     <div class="">kmate
     </div>
-    <div class="">kmate
-    </div>
-    <div class="">kmate
-    </div>
   </div>
 
-<footer>
+  <div id="leaveConfirm" class="left-panel">
+  <div class="warning">
+  <h1>Are you sure?</h1>
+  <h3>Once you leave a kohort, you cannot be added back to it.</h3>
     <div class="other-option">
-      <div class="login-btn"><%= link_to "leave kohort", leave_path %></div>
+      <div class="login-btn"><%= link_to "YES - leave kohort", kohorts_path %></div>
     </div>
+   <div class="other-option">
+    <div class="login-btn"><%= link_to "NO - take me back", kohort_path %></div>
   </div>
-</footer>
-
-<!-- <div class="mobile-screen">
-  <div class="header">
-    <h1>Kohort Chat</h1>
+  </div>
   </div>
 
-  </div> -->
+  <footer>
+    <div class="leaveWarning"  id="leave">
+      Leave Kohort
+    </div>
+  </footer>
+  </div>
+
+<div class="right-panel">
+  <h1 class= "right-header">Kohort Chat</h1>
+
+
+
+</div>

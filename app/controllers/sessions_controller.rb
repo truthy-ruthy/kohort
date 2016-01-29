@@ -4,10 +4,11 @@ class SessionsController < ApplicationController
   end
 
   def create
+    p params
     user = User.find_by(email:params[:session][:email])
-    if user && user.authenticate(params[:session][:password])
+    if user && user.authenticate(params[:password])
       log_in user
-      flash[:danger] = "Welcome back!"
+      flash[:success] = "Welcome back!"
       redirect_to kohorts_path
     else
       flash[:danger] = "Invalid email/password combination"
@@ -17,6 +18,6 @@ class SessionsController < ApplicationController
 
   def destroy
     log_out
-    redirect_to root_url
+    redirect_to user_path
   end
 end

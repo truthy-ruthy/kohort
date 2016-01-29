@@ -10,12 +10,12 @@ get 'join' => 'kohort#join_kohort'
 post 'join' => 'kohort#join_kohort'
 get 'kohort' => 'kohort#kohort_home'
 get 'leave' => 'kohort#leave_kohort'
-get 'logout' => 'user#homepage'
+get 'user' => 'user#homepage'
 post 'users' => 'user#create'
 get    'login'   => 'sessions#new'
 post   'login'   => 'sessions#create'
-delete 'logout/:id'  => 'sessions#destroy'
-get '/force' => 'user#force'
+delete 'logout'  => 'sessions#destroy'
+# get '/force' => 'user#force'
 
 
 

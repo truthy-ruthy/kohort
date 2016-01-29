@@ -1,48 +1,44 @@
-<nav>
-  <div class="logo"></div>
-</nav>
-
-<!-- <div class="mobile-screen-left">
-  <div class="header">
-    <h1>About</h1>
-  </div> -->
-
 <div class="mobile-screen">
-
-
-    <div class="row">
 
   <div class="left-panel">
     <h1 class="left-header">Why Kohort?</h1>
+    <div class="why">
+      <p>
+        A place for the self-employed and work-from-homers to connect face to face and form the relationships normally created in the workplace.<br><br> Connect with your kohort daily, weekly or monthly and get the social connection, support and accountablility you need and crave!
+        <div id="newUser"><p class="option-text">Join Kohort!</p></div>
+      </p>
+
+    </div>
     <footer>&copy 2016 truthy-ruthy</footer>
   </div>
+
+
+
+
 
 <div class="right-panel">
   <h1 class="right-header">Login</h1>
     <%= form_for @user =User.new, :html => { :id => 'registration-form' } do |f| %>
     <%= render 'shared/error_messages' %>
-      <%= f.text_field :first_name, class: '', placeholder: "First Name" %>
-      <%= f.text_field :email, class: '', placeholder: "Email" %>
-      <%= select_tag(:user_age_id, options_for_select([['Age', 0], ['18-24', 1], ['25-34', 2], ['35-44', 3], ['45-54', 4], ['55-64', 5], ['65-75', 6]])) %>
-      <%= select_tag(:user_gender_id, options_for_select([['Gender', 0],['Female', 1], ['Male', 2]])) %>
-      <%= f.text_field :password, class: "", placeholder: "Password" %>
-      <%= f.text_field :password_confirmation, class: "", placeholder: "Confirm Password" %>
-      <%= f.submit %>
+      <%= f.text_field :first_name, :autocomplete => "off", class: '', placeholder: "First Name" %>
+      <%= f.text_field :email, :autocomplete => "off", class: '', placeholder: "Email" %>
+      <%= collection_select(:age, :age_id, Age.all, :id, :age_range, :include_blank => "Age") %>
+      <%= collection_select(:gender, :gender_id, Gender.all, :id, :gender, :include_blank => "Gender") %>
+        <%= password_field_tag(:password, "", class: "masked_input_field", maxlength: 16, placeholder: "Password") %>
+        <%= password_field_tag(:password_confirmation, "", class: "masked_input_field", maxlength: 16, placeholder: "Confirm Password") %>
+      <%= submit_tag "Join", class: "login-btn"%>
     <% end %>
+
+      <%= form_for(:session, url: login_path, :html => { :id => 'login-form' }) do |f| %>
+      <%= render 'shared/error_messages' %>
+      <%= f.text_field :email, :autocomplete => "off", class: "", placeholder: "Email" %>
+      <%= password_field_tag(:password, "", class: "masked_input_field", maxlength: 16, placeholder: "Password") %>
+      <%= submit_tag "Sign In", class: "login-btn"%>
+    <% end %>
+
 </div>
 
-<div class="right-panel" class="five columns">
-  <%= form_for(:session, url: login_path, :html => { :id => 'login-form' }) do |f| %>
-  <%= render 'shared/error_messages' %>
-  <%= f.text_field :email, class: "", placeholder: "Email" %>
-  <%= f.text_field :password, class: "", placeholder: "Password" %>
-  <%= f.submit %>
-<% end %>
 
-<div class="other-options" class="right-panel">
-  <div class="option" id="newUser"><p class="option-text">Sign Up!</p></div>
-</div>
-</div>
 
 
 <!-- <div class="right-panel" class="five columns">
@@ -53,5 +49,4 @@
   </div> -->
 
 
-</div>
 </div>
