@@ -13,31 +13,26 @@ class UserController < ApplicationController
 
 # create user
   def create
-    @user = User.new(user_params)
+    @user = User.create(user_params)
+    puts @user
     p user_params
+    # if @user.create
     if (@user != nil && @user.save)
-      # log_in @user
-      puts 'success'
-      flash[:success] = "Welcome!"
-      redirect_to kohorts_path
+      log_in @user
+      flash.now[:success] = "Welcome to Kohort!"
+      redirect_to kohorts_path(@kohort)
     else
-      puts "--------------"
-      puts "rahhhhh"
-      puts "--------------"
-      flash[:danger] = "Please try again"
-      render 'homepage'
+    #   raise @user.errors.to_yaml
+    #  flash.now[:danger] = "Please try again"
+    render "homepage"
     end
   end
 
-# def force
-#   session[:user_id] = nil
-#   render 'homepage'
-# end
   private
 
     def user_params
-        params.require(:user).permit(:first_name, :email, :password, :password_confirmation, :age_id, :gender_id)
-
+        params.require(:user).permit(:first_name, :email, :password, :password_confirmation)
+# :age_id, :gender_id
     end
 end
 # , password: params[:password],  password_confirmation: params[:password_confirmation], age_id: params[:age_id],gender_id: params[:gender_id]

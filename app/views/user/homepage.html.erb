@@ -18,22 +18,23 @@
 
 <div class="right-panel">
   <h1 class="right-header">Login</h1>
-    <%= form_for @user =User.new, :html => { :id => 'registration-form' } do |f| %>
+
+  <%= form_for(:session, url: login_path, :html => { :id => 'login-form' }) do |f| %>
+  <%= render 'shared/error_messages' %>
+  <%= f.text_field(:email, {:autocomplete => "off", placeholder: "Email"}) %>
+  <%= f.password_field(:password, {class: "masked_input_field", placeholder: "Password"}) %>
+  <%= f.submit "Sign In", class: "login-btn"%>
+<% end %>
+
+<%= form_for(User.new, html: { id: 'registration-form' }) do |f| %>
     <%= render 'shared/error_messages' %>
       <%= f.text_field :first_name, :autocomplete => "off", class: '', placeholder: "First Name" %>
       <%= f.text_field :email, :autocomplete => "off", class: '', placeholder: "Email" %>
-      <%= collection_select(:age, :age_id, Age.all, :id, :age_range, :prompt => "Age") %>
-      <%= collection_select(:gender, :gender_id, Gender.all, :id, :gender, :index => "Gender") %>
-        <%= password_field_tag(:password, "", class: "masked_input_field", maxlength: 16, placeholder: "Password") %>
-        <%= password_field_tag(:password_confirmation, "", class: "masked_input_field", maxlength: 16, placeholder: "Confirm Password") %>
-      <%= submit_tag "Join", class: "login-btn"%>
-    <% end %>
-
-      <%= form_for(:session, url: login_path, :html => { :id => 'login-form' }) do |f| %>
-      <%= render 'shared/error_messages' %>
-      <%= f.text_field :email, :autocomplete => "off", class: "", placeholder: "Email" %>
-      <%= password_field_tag(:password, "", class: "masked_input_field", maxlength: 16, placeholder: "Password") %>
-      <%= submit_tag "Sign In", class: "login-btn"%>
+      <!-- <%= collection_select(:age, :age_id, Age.all, :id, :age_range, :index => "Age") %>
+      <%= collection_select(:gender, :gender_id, Gender.all, :id, :gender, :index => "Gender") %> -->
+        <%= f.password_field(:password, {class: "masked_input_field", maxlength: 16, placeholder: "Password"}) %>
+        <%= f.password_field(:password_confirmation, {class: "masked_input_field", maxlength: 16, placeholder: "Confirm Password"}) %>
+      <%= f.submit "Join", class: "login-btn"%>
     <% end %>
 
 </div>

@@ -278,10 +278,14 @@ footer {
   color: white; }
 
 #error_explanation {
+  width: 225px;
+  height: 150px;
+  margin-top: -60px;
+  padding-bottom: 40px;
   color: red; }
   #error_explanation ul {
     color: red;
-    font-size: 20px; }
+    font-size: 13px; }
 
 .field_with_errors .form-control {
   color: red;

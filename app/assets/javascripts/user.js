@@ -2,11 +2,6 @@ $(document).ready(function () {
 
 $("#newUser").click(function(){
   $(".right-header").text("Registration");
-  $(".logo").css({
-    "width":"75px",
-    "height":"75px",
-    "top":"10px"
-  });
   $("#login-form").fadeOut(150);
   $("#registration-form").delay(150).fadeIn(200);
   $("#newUser").fadeOut(200);
@@ -20,11 +15,6 @@ $("#leave").click(function(){
 
 // $("#signup-btn,#getpass-btn").click(function(){
 //   $("h1").text("Log in");
-//   $(".logo").css({
-//     "width":"75px",
-//     "height":"75px",
-//     "top":"10px"
-//   });
 //   // $("#registration-form,#fpass-form").fadeOut(150);
 //   // $("#login-form").delay(200).fadeIn(200);
 //   // $(".other-options").fadeIn(200);
@@ -32,11 +22,7 @@ $("#leave").click(function(){
 
 // $("#fPass").click(function(){
 //   $(".right-header").text("Forgot password");
-//   $(".logo").css({
-//     "width":"75px",
-//     "height":"75px",
-//     "top":"10px"
-//   });
+
 //
 //   $("#login-form").fadeOut(150);
 //   $("#fpass-form").delay(200).fadeIn(200);

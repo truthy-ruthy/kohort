@@ -1,9 +1,13 @@
 class KohortController < ApplicationController
 
+  # before_action :require_authentication
+  before_action :require_login
+
+
 #shows kohorts that user belongs to
   def index
      @kohorts = Kohort.all
-  end
+  ends
 
 # gets new kohort form
   def new
@@ -37,3 +41,4 @@ class KohortController < ApplicationController
 #           redirect_to my_kohorts_path
 #           kohort_id.appendTo(my kohorts div)
  end
+end

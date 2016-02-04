@@ -341,10 +341,14 @@ footer {
 
 // # error colors- fix- currently in bootstrap
 #error_explanation {
+  width: 225px;
+  height: 150px;
+  margin-top: -60px;
+  padding-bottom: 40px;
   color: red;
   ul {
     color: red;
-    font-size: 20px;
+    font-size: 13px;
   }
 }
 
