@@ -1,0 +1,17 @@
+<% if @user.try(:errors).try(:any?) %>
+<script>
+  $("#registration-form").css({"display":"block"});
+  $("#login-form").css({"display":"none"});
+  $("#newUser").css({"display":"none"});
+</script>
+  <div id="error_explanation">
+    <div class="alert alert-danger">
+      <%= pluralize(@user.errors.count, "error") %>:
+    </div>
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
