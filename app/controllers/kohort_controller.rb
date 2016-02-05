@@ -56,6 +56,6 @@ private
   def kohort_params
       # params.require(:kohort).permit(:zip_code, :frequency_id, :daytime_id, :interaction_id, :coed_id, :industry_id)
   end
-
+end
 
 end
