@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160129052433) do
+ActiveRecord::Schema.define(version: 20160125195103) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "ages", force: :cascade do |t|
     t.string   "age_range"
@@ -40,7 +43,12 @@ ActiveRecord::Schema.define(version: 20160129052433) do
   create_table "genders", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "gender"
+  end
+
+  create_table "groups", force: :cascade do |t|
+    t.integer  "zip_code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "industries", force: :cascade do |t|
@@ -55,19 +63,6 @@ ActiveRecord::Schema.define(version: 20160129052433) do
     t.datetime "updated_at",         null: false
   end
 
-  create_table "kohorts", force: :cascade do |t|
-    t.integer  "zip_code"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.integer  "age_id"
-    t.integer  "coed_id"
-    t.integer  "daytime_id"
-    t.integer  "interaction_id"
-    t.integer  "user_id"
-    t.integer  "industry_id"
-    t.integer  "frequency_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "email"
     t.string   "first_name"
@@ -75,8 +70,10 @@ ActiveRecord::Schema.define(version: 20160129052433) do
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
     t.string   "password_confirmation"
-    t.integer  "age_id"
     t.integer  "gender_id"
+    t.integer  "age_id"
   end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
 end
