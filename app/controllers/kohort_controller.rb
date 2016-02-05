@@ -22,7 +22,7 @@ class KohortController < ApplicationController
     # puts @kohort
     render "my_kohorts"
   end
-
+end
 #find kohort with:
 # must match: zip code, age(not visible), field, conversation_level
 # match or doesn't matter: coed, frequency, daytime
