@@ -17,12 +17,15 @@ class KohortController < ApplicationController
 
 #create a kohort if a matching one does not exist
   def create
-    @kohort = Kohort.create
-    # (kohort_params)
+    @kohort = Kohort.create(kohort_params)
     # puts @kohort
-    render "my_kohorts"
+    if @kohort.save
+    render "my_kohorts", notice: "kohort joined!"
+  else
+    render "my_kohorts", notice: "you're forgetting something"
   end
 end
+
 #find kohort with:
 # must match: zip code, age(not visible), field, conversation_level
 # match or doesn't matter: coed, frequency, daytime
@@ -48,5 +51,11 @@ end
 #         if (@user != nil && @user.save)
 #           redirect_to my_kohorts_path
 #           kohort_id.appendTo(my kohorts div)
+private
+
+  def kohort_params
+      # params.require(:kohort).permit(:zip_code, :frequency_id, :daytime_id, :interaction_id, :coed_id, :industry_id)
+  end
+
 
 end

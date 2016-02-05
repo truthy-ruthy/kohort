@@ -6,5 +6,6 @@ class AddColumnsToKohorts < ActiveRecord::Migration
     add_column :kohorts, :interaction_id, :integer
     add_column :kohorts, :conversation_id, :integer
     add_column :kohorts, :age_id, :integer
+    add_column :kohorts, :daytime_id, :integer
   end
 end
