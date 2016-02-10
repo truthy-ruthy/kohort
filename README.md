@@ -7,7 +7,7 @@ A group platform for the self-employed/work-from-home/telecommuters to form work
 ####This app allows you to meet up with people in your area who also work from home and work in your field.
 
 #####Functioning: 
-Login, layout, logout
+Login, registration, authentication, layout, logout
 #####Not-functioning/not there: 
 group formation, drop down menu repitition, group chat
 #####Goals: 
