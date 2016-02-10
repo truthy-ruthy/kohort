@@ -8,8 +8,8 @@ A group platform for the self-employed/work-from-home/telecommuters to form work
 
 #####Functioning: 
 Login, registration, authentication, layout, logout
-#####Not-functioning/not there: 
-group formation, drop down menu repitition, group chat
+#####In Progress: 
+kohort formation, drop down menu repetition, group chat
 #####Goals: 
 All of the above, google search for meetup location suggestions, local people search, responsiveness, accessibility, more styling.
 #####Challenges: 
